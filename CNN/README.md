@@ -16,14 +16,11 @@ The fully connected block consisted of a dense layer, which projected the high-d
 
 As expected, the CNN demonstrated robust generalization and accuracy across almost all the generators present in the dataset, achieving good accuracies on validation, testing, and augmented testing: **88.261%**, **88.191%**, and **87.035%**, respectively.
 
-For a more detailed plots and visualization. The detailed plots can be found on the __Plot Results__ folder. This folder is organized by levels where:
-- Shallow level contains:
-    - Per Generator Folder
-    - Predictions Folder
-    - Model Architecture
-    - Training and Validation Loss
-    - Confusion Matrices for Test and Validation
-
-- The Deeper Levels (the folders) contain:
-    - The Confusion Matrices for each generators and also the real images
+For a more detailed plots and visualization. The detailed plots can be found on the __Plot Results__ folder. This folder is organized by folders where it contains:
+- Per Generator Folder
+    - The Confusion Matrices for each generators and also the real images    
+- Predictions Folder
     - A few examples of predictions using the model
+- Model Architecture
+- Training and Validation Loss
+- Confusion Matrices for Test and Validation
