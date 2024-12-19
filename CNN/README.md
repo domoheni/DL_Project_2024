@@ -15,3 +15,5 @@ The fully connected block consisted of a dense layer, which projected the high-d
 ## Outcome
 
 As expected, the CNN demonstrated robust generalization and accuracy across almost all the generators present in the dataset, achieving good accuracies on validation, testing, and augmented testing: **88.261%**, **88.191%**, and **87.035%**, respectively.
+
+For a more detailed plots and visualization. The detailed plots can be found on the __Plot Resutls__ folder.
