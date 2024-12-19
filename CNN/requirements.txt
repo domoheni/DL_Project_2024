@@ -1,0 +1,12 @@
+opencv-python
+numpy
+matplotlib
+torch
+torchvision
+scikit-learn
+pandas
+torchviz
+graphviz
+pydot
+hiddenlayer
+IPython

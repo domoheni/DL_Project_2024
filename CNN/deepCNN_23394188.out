@@ -1,0 +1,126 @@
+Using device: cuda
+Data successfully split and saved!
+Creating Dataset Class
+--------------Testing and Validation-----------------------------------------------------------------------------------------
+Epoch [1/10], Train Loss: 0.6691, Val Loss: 0.5570, Val Accuracy: 0.7367
+Epoch [2/10], Train Loss: 0.5027, Val Loss: 0.4208, Val Accuracy: 0.8157
+Epoch [3/10], Train Loss: 0.4303, Val Loss: 0.3610, Val Accuracy: 0.8448
+Epoch [4/10], Train Loss: 0.3981, Val Loss: 0.3425, Val Accuracy: 0.8517
+Epoch [5/10], Train Loss: 0.3795, Val Loss: 0.3645, Val Accuracy: 0.8420
+Epoch [6/10], Train Loss: 0.3352, Val Loss: 0.3081, Val Accuracy: 0.8748
+Epoch [7/10], Train Loss: 0.3278, Val Loss: 0.3039, Val Accuracy: 0.8728
+Epoch [8/10], Train Loss: 0.3211, Val Loss: 0.2972, Val Accuracy: 0.8762
+Epoch [9/10], Train Loss: 0.3158, Val Loss: 0.3001, Val Accuracy: 0.8728
+Epoch [10/10], Train Loss: 0.3128, Val Loss: 0.2851, Val Accuracy: 0.8826
+Validation Accuracy: 0.8826197477944475
+Validation Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.87      0.90      0.88     10000
+         1.0       0.89      0.87      0.88     10063
+
+    accuracy                           0.88     20063
+   macro avg       0.88      0.88      0.88     20063
+weighted avg       0.88      0.88      0.88     20063
+
+--------------Testing (Test Set)-----------------------------------------------------------------------------------------
+Test Accuracy: 0.8819105488594482
+Test Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.87      0.90      0.88     10000
+         1.0       0.89      0.87      0.88     10078
+
+    accuracy                           0.88     20078
+   macro avg       0.88      0.88      0.88     20078
+weighted avg       0.88      0.88      0.88     20078
+
+Test AUC-ROC: 0.9496839799563405
+--------------Testing (Augmented Test Set)-----------------------------------------------------------------------------------------
+Test Accuracy: 0.8703556131088754
+Test Classification Report:
+               precision    recall  f1-score   support
+
+         0.0       0.86      0.89      0.87     10000
+         1.0       0.88      0.85      0.87     10078
+
+    accuracy                           0.87     20078
+   macro avg       0.87      0.87      0.87     20078
+weighted avg       0.87      0.87      0.87     20078
+
+Test AUC-ROC: 0.9438595554673547
+-------------- Architecture -----------------------------------------------------------------------------------------
+-------------- Confusion Matrixes -----------------------------------------------------------------------------------------
+Length of y_true_test: 20078
+Length of y_pred_test: 20078
+Length of file_paths: 20078
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23394188: <deepCNNTrials> in cluster <dcc> Done
+
+Job <deepCNNTrials> was submitted from host <hpclogin1> by user <s233177> in cluster <dcc> at Mon Dec  9 15:27:52 2024
+Job was executed on host(s) <n-62-20-14>, in queue <gpuv100>, as user <s233177> in cluster <dcc> at Mon Dec  9 15:34:05 2024
+</zhome/ca/7/203238> was used as the home directory.
+</dtu/blackhole/06/203238/dl_project/cnn> was used as the working directory.
+Started at Mon Dec  9 15:34:05 2024
+Terminated at Mon Dec  9 17:10:17 2024
+Results reported at Mon Dec  9 17:10:17 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+### General options
+### –- specify queue --
+#BSUB -q gpuv100                  # Queue name (modify if needed, e.g., gpua100)
+### -- set the job Name --
+#BSUB -J deepCNNTrials            # Job name
+### -- ask for number of cores (default: 1) --
+#BSUB -n 1                        # Number of CPU cores
+### -- Select the resources: 1 GPU in exclusive process mode --
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set walltime limit: hh:mm -- maximum 24 hours for GPU queues
+#BSUB -W 24:00
+### -- request 10GB of system-memory --
+#BSUB -R "rusage[mem=10GB]"
+### -- request a 32GB GPU --
+#BSUB -R "select[gpu32gb]"
+### -- set the output and error file paths. %J is the job ID --
+#BSUB -o deepCNN_%J.out
+#BSUB -e deepCNN_%J.err
+
+### Activate virtual environment
+source /dtu/blackhole/06/203238/dl_project/cnn/.venv/bin/activate
+
+### Navigate to the project directory
+cd /dtu/blackhole/06/203238/dl_project/cnn
+
+### Run the Python script
+python DeepCNN.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   18827.00 sec.
+    Max Memory :                                 1342 MB
+    Average Memory :                             1310.97 MB
+    Total Requested Memory :                     10240.00 MB
+    Delta Memory :                               8898.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                13
+    Run time :                                   5772 sec.
+    Turnaround time :                            6145 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <deepCNN_23394188.err> for stderr output of this job.
+
