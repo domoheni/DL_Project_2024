@@ -1,0 +1,2 @@
+In this folder there are the files relative to the finetuning of the tensorflow ResNet50 pretrained on ImageNet.
+The three files are diverse in the training and the fintuning one can be adapted in how many layers to train to see how it behaves. the plot are relative to the files as they are plus a previous trial that wasn't performing too good. The bash file  as it is it's launching the fintuning script but by changing the python file name is able to run all of them.
