@@ -1,0 +1,27 @@
+{'loss': 0.8415, 'grad_norm': 2.512141704559326, 'learning_rate': 8.963133640552995e-07, 'epoch': 0.23}
+{'loss': 0.4673, 'grad_norm': 4.908726692199707, 'learning_rate': 7.811059907834101e-07, 'epoch': 0.46}
+{'loss': 0.4118, 'grad_norm': 2.378791332244873, 'learning_rate': 6.658986175115207e-07, 'epoch': 0.68}
+{'loss': 0.3877, 'grad_norm': 2.816354751586914, 'learning_rate': 5.506912442396313e-07, 'epoch': 0.91}
+{'eval_loss': 0.56889808177948, 'eval_accuracy': 0.7026666666666667, 'eval_runtime': 15.9505, 'eval_samples_per_second': 188.082, 'eval_steps_per_second': 5.893, 'epoch': 1.0}
+{'loss': 0.3633, 'grad_norm': 3.0859715938568115, 'learning_rate': 4.354838709677419e-07, 'epoch': 1.14}
+{'loss': 0.3587, 'grad_norm': 4.011782169342041, 'learning_rate': 3.202764976958525e-07, 'epoch': 1.37}
+{'loss': 0.3508, 'grad_norm': 2.988626480102539, 'learning_rate': 2.0506912442396312e-07, 'epoch': 1.59}
+{'loss': 0.3457, 'grad_norm': 3.484025239944458, 'learning_rate': 8.986175115207373e-08, 'epoch': 1.82}
+{'eval_loss': 0.5295491814613342, 'eval_accuracy': 0.7346666666666667, 'eval_runtime': 15.6975, 'eval_samples_per_second': 191.113, 'eval_steps_per_second': 5.988, 'epoch': 2.0}
+{'train_runtime': 3549.1421, 'train_samples_per_second': 79.162, 'train_steps_per_second': 1.237, 'train_loss': 0.4321030879618095, 'epoch': 2.0}
+Model and processor saved at /dtu/blackhole/03/203779/dl_project/train_from_scrach_second_attempt
+{'test_loss': 0.5295491814613342, 'test_accuracy': 0.7346666666666667, 'test_runtime': 15.2276, 'test_samples_per_second': 197.01, 'test_steps_per_second': 6.173}
+Classification Report:
+              precision    recall  f1-score   support
+
+        real     0.0000    0.0000    0.0000         0
+        fake     1.0000    0.7347    0.8470      3000
+
+    accuracy                         0.7347      3000
+   macro avg     0.5000    0.3673    0.4235      3000
+weighted avg     1.0000    0.7347    0.8470      3000
+
+Confusion Matrix:
+ [[   0    0]
+ [ 796 2204]]
+Confusion matrix saved at /dtu/blackhole/03/203779/dl_project/confusion_matrix_test_cips-ffhq.png

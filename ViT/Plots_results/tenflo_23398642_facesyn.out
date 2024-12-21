@@ -1,0 +1,27 @@
+{'loss': 0.8419, 'grad_norm': 2.719249725341797, 'learning_rate': 8.963133640552995e-07, 'epoch': 0.23}
+{'loss': 0.466, 'grad_norm': 4.563302516937256, 'learning_rate': 7.811059907834101e-07, 'epoch': 0.46}
+{'loss': 0.4106, 'grad_norm': 3.2589573860168457, 'learning_rate': 6.658986175115207e-07, 'epoch': 0.68}
+{'loss': 0.387, 'grad_norm': 2.970417022705078, 'learning_rate': 5.506912442396313e-07, 'epoch': 0.91}
+{'eval_loss': 0.5318505764007568, 'eval_accuracy': 0.727, 'eval_runtime': 16.7345, 'eval_samples_per_second': 179.27, 'eval_steps_per_second': 5.617, 'epoch': 1.0}
+{'loss': 0.3625, 'grad_norm': 3.8217082023620605, 'learning_rate': 4.354838709677419e-07, 'epoch': 1.14}
+{'loss': 0.3578, 'grad_norm': 3.411756992340088, 'learning_rate': 3.202764976958525e-07, 'epoch': 1.37}
+{'loss': 0.3499, 'grad_norm': 4.0578742027282715, 'learning_rate': 2.0506912442396312e-07, 'epoch': 1.59}
+{'loss': 0.345, 'grad_norm': 3.4614717960357666, 'learning_rate': 8.986175115207373e-08, 'epoch': 1.82}
+{'eval_loss': 0.49247997999191284, 'eval_accuracy': 0.7523333333333333, 'eval_runtime': 16.4223, 'eval_samples_per_second': 182.678, 'eval_steps_per_second': 5.724, 'epoch': 2.0}
+{'train_runtime': 3768.1529, 'train_samples_per_second': 74.561, 'train_steps_per_second': 1.165, 'train_loss': 0.431324361397085, 'epoch': 2.0}
+Model and processor saved at /dtu/blackhole/03/203779/dl_project/train_from_scrach_second_attempt
+{'test_loss': 0.49247997999191284, 'test_accuracy': 0.7523333333333333, 'test_runtime': 15.8825, 'test_samples_per_second': 188.887, 'test_steps_per_second': 5.918}
+Classification Report:
+              precision    recall  f1-score   support
+
+        real     0.0000    0.0000    0.0000         0
+        fake     1.0000    0.7523    0.8587      3000
+
+    accuracy                         0.7523      3000
+   macro avg     0.5000    0.3762    0.4293      3000
+weighted avg     1.0000    0.7523    0.8587      3000
+
+Confusion Matrix:
+ [[   0    0]
+ [ 743 2257]]
+Confusion matrix saved at /dtu/blackhole/03/203779/dl_project/confusion_matrix_test_cips-ffhq.png

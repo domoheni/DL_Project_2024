@@ -1,0 +1,104 @@
+{'loss': 0.8413, 'grad_norm': 2.534518003463745, 'learning_rate': 8.963133640552995e-07, 'epoch': 0.23}
+{'loss': 0.4665, 'grad_norm': 4.44484281539917, 'learning_rate': 7.811059907834101e-07, 'epoch': 0.46}
+{'loss': 0.4106, 'grad_norm': 2.504178524017334, 'learning_rate': 6.658986175115207e-07, 'epoch': 0.68}
+{'loss': 0.387, 'grad_norm': 2.7487032413482666, 'learning_rate': 5.506912442396313e-07, 'epoch': 0.91}
+{'eval_loss': 0.47276562452316284, 'eval_accuracy': 0.7803484528891029, 'eval_runtime': 337.2004, 'eval_samples_per_second': 178.556, 'eval_steps_per_second': 5.581, 'epoch': 1.0}
+{'loss': 0.3625, 'grad_norm': 3.272554397583008, 'learning_rate': 4.354838709677419e-07, 'epoch': 1.14}
+{'loss': 0.3577, 'grad_norm': 3.3957200050354004, 'learning_rate': 3.202764976958525e-07, 'epoch': 1.37}
+{'loss': 0.3497, 'grad_norm': 3.131014108657837, 'learning_rate': 2.0506912442396312e-07, 'epoch': 1.59}
+{'loss': 0.3449, 'grad_norm': 3.400339126586914, 'learning_rate': 8.986175115207373e-08, 'epoch': 1.82}
+{'eval_loss': 0.4411117136478424, 'eval_accuracy': 0.7997143284226611, 'eval_runtime': 330.5599, 'eval_samples_per_second': 182.142, 'eval_steps_per_second': 5.693, 'epoch': 2.0}
+{'train_runtime': 4394.4177, 'train_samples_per_second': 63.935, 'train_steps_per_second': 0.999, 'train_loss': 0.43126220007963767, 'epoch': 2.0}
+Model saved at /dtu/blackhole/03/203779/dl_project/trained_model_ViT_from_scrach
+{'test_loss': 0.4411117136478424, 'test_accuracy': 0.7997143284226611, 'test_runtime': 329.7162, 'test_samples_per_second': 182.609, 'test_steps_per_second': 5.708}
+Classification Report:
+              precision    recall  f1-score   support
+
+        real     0.7392    0.9241    0.8214     30000
+        fake     0.8997    0.6762    0.7721     30209
+
+    accuracy                         0.7997     60209
+   macro avg     0.8194    0.8001    0.7967     60209
+weighted avg     0.8197    0.7997    0.7966     60209
+
+Confusion Matrix:
+ [[27723  2277]
+ [ 9782 20427]]
+Confusion matrix saved at /dtu/blackhole/03/203779/dl_project/confusion_matrix_test.png
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 23378261: <modelTrials> in cluster <dcc> Done
+
+Job <modelTrials> was submitted from host <n-62-30-4> by user <s233559> in cluster <dcc> at Sat Dec  7 15:44:06 2024
+Job was executed on host(s) <4*n-62-20-3>, in queue <gpuv100>, as user <s233559> in cluster <dcc> at Sat Dec  7 16:53:18 2024
+</zhome/f4/e/203779> was used as the home directory.
+</dtu/blackhole/03/203779/dl_project> was used as the working directory.
+Started at Sat Dec  7 16:53:18 2024
+Terminated at Sat Dec  7 18:17:51 2024
+Results reported at Sat Dec  7 18:17:51 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh
+### General options
+### –- specify queue --
+#BSUB -q gpuv100
+### -- set the job Name --
+#BSUB -J modelTrials
+### -- ask for number of cores (default: 1) --
+#BSUB -n 4
+### -- Select the resources: 1 gpu in exclusive process mode --
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+#BSUB -W 24:00
+# request 5GB of system-memory
+#BSUB -R "rusage[mem=5GB]"
+#BSUB -R "span[hosts=1]"
+### -- set the email address --
+# please uncomment the following line and put in your e-mail address,
+# if you want to receive e-mail notifications on a non-default address
+###BSUB -u s233559@dtu.dk
+### -- send notification at start --
+###BSUB -B s233559@dtu.dk
+### -- send notification at completion--
+###BSUB -N s233559@dtu.dk
+### -- Specify the output and error file. %J is the job-id --
+### -- -o and -e mean append, -oo and -eo mean overwrite --
+#BSUB -o gpuTrial_%J.out
+#BSUB -e gpuTrial_%J.err
+# -- end of LSF options --
+
+# Load the cuda module
+module load cuda/11.6
+
+source .venv/bin/activate
+cd /dtu/blackhole/03/203779/dl_project/
+python ViT_Train_From_Scrach.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5050.00 sec.
+    Max Memory :                                 1527 MB
+    Average Memory :                             1411.15 MB
+    Total Requested Memory :                     20480.00 MB
+    Delta Memory :                               18953.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                13
+    Run time :                                   5075 sec.
+    Turnaround time :                            9225 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <gpuTrial_23378261.err> for stderr output of this job.
+
